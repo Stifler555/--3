@@ -133,8 +133,15 @@ while True:
 строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 
-def int_func (*args):
-    word = input("Input words ")
-    print(word.title())
-    return
-int_func()
+def int_func(input_word: str):
+    return "".join([
+        input_word[0].upper(), input_word[1:]
+    ])
+
+user_words = input("Введите строку из несскольких слов >>> ").split()
+
+for idx, word in enumerate(user_words):
+    user_words[isx] = int_func(word)
+    
+print(" ".join(user_words)
+    
