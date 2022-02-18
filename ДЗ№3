@@ -24,16 +24,28 @@ print(main(x, y))
 параметры как именованные аргументы. Реализовать вывод данных
 о пользователе одной строкой.
 
-    name = input('enter name')
-    surname = input('enter surname')
-    year = int(input('enter year'))
-    city = input('enter city')
-    email = input('enter email')
-    telephone = input('input telephone')
+    def main(first_name: str = None,
+         last_name: str = None,
+         year: int = None,
+         city: str = None,
+         phone: str = None,
+         email: str = None):
+    return f"{first_name} {last_name} ({year}), {city}, {phone},{email}"
 
-def my_func (name, surname, year, city, email, telephone):
-     return ' '.join([name, surname, year, city, email, telephone])
-print(my_func(surname = 'Frolov', name = 'Sergey', year = '1990', city = 'Syzran', email = 'error@mail.ru', telephone = '8-903-300-99-87'))
+
+
+user_first_name = input("Имя >>> ")
+user_last_name = input("Фамилия >>> ")
+user_year = input("Год рождения >>> ")
+user_city = input("Город >>> ")
+user_email = input("Email >>> ")
+user_phone = input("номер телефона >>> ")
+
+prin(
+    main(first_name=user_first_name, last_name=user_last_name,
+         year=user_year, city=user_city, email=user_email,
+         phone=user_phone)
+)
 
 
 
