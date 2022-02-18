@@ -102,25 +102,24 @@ print(my_func(a, b))
 программу.
 
 
-def my_sum ():
-    sum_res = 0
-    ex = False
-    while ex == False:
-        number = input('Input numbers or Q for quit - ').split()
+total = 0 
 
-        res = 0
-        for el in range(len(number)):
-            if number[el] == 'q' or number[el] == 'Q':
-                ex = True
-                break
-            else:
-                res = res + int(number[el])
-        sum_res = sum_res + res
-        print(f'Current sum is {sum_res}')
-    print(f'Your final sum is {sum_res}')
-
-
-my_sum()
+while True:
+    user_numbers = input("Введите строку из чисел через пробел >>> ").split()
+    has_special_character = False
+    
+    for number in user_numbers:
+        if number.isdigit():
+            total += int(number)
+            
+        else:
+            has_special_character = True
+            break
+            
+    print(f"Щбщая сумма чисел = {total}")
+    
+    if has_special_character:
+        break
 
 
 
